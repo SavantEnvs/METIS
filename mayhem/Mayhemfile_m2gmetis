@@ -1,0 +1,9 @@
+project: savantenvs/METIS
+target: m2gmetis
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/m2gmetis/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_m2gmetis @@
+    afl: true
+    timeout: 10

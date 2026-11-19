@@ -1,0 +1,9 @@
+project: savantenvs/METIS
+target: mpmetis
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mpmetis/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mpmetis @@
+    afl: true
+    timeout: 10
